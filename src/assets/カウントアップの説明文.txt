@@ -1,0 +1,31 @@
+<template>
+<div>
+<p>{{number}}回クリックされている</P>
+<button @click="countup">カウントボタン</button>
+<hr>
+<button @click="reset">リセット</button>
+</div>
+</template>
+
+
+----------------------------------------
+
+<script>
+
+
+export default {
+  data() {
+    return {
+      number : 0
+    };
+  },
+  methods: {
+    countup: function(){
+      this.number += 1
+    },
+    reset:function(){
+      this.number = 0
+    }
+  }
+}
+</script>
